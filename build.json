@@ -1,0 +1,18 @@
+{
+ "android": {
+     "release": {
+         "keystore": "my-release-key.keystore",
+         "storePassword": "czupakabra",
+         "alias": "moczixcog",
+         "password" : "czupakabra",
+         "keystoreType": "PKCS12"
+     },
+	 "debug": {
+     "keystore": "my-release-key.keystore",
+     "storePassword": "czupakabra",
+     "alias": "moczixcog",
+     "password" : "czupakabra",
+     "keystoreType": "PKCS12"
+	 }
+ }
+}

@@ -13,32 +13,39 @@ import {GooglePlus} from '@ionic-native/google-plus';
 import {AuthService} from "../pages/shared/auth.service";
 import {BaseHttpInterceptor} from "../pages/shared/base-http-interceptor";
 import {AuthInterceptor} from "../pages/shared/auth-interceptor";
+import {ErrorService} from "../pages/shared/error.service";
+import {InGamePage} from "../pages/in-game/in-game";
+import {InGamePageModule} from "../pages/in-game/in-game.module";
 
 
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
-    HomePage
+    HomePage,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+
+    InGamePageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     LoginPage,
-    HomePage
+    HomePage,
   ],
   providers: [
+
     {provide: HTTP_INTERCEPTORS, useClass: BaseHttpInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
     StatusBar,
     SplashScreen,
 
+    ErrorService,
     AuthService,
 
     GooglePlus,
